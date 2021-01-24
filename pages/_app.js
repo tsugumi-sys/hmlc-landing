@@ -1,7 +1,9 @@
-import '../styles/globals.css'
+// Add gtag.js here
+import 'fontsource-dm-sans'
+import 'fontsource-bree-serif'
+import 'fontsource-roboto-slab'
+import 'rc-drawer/assets/index.css'
 
-function MyApp({ Component, pageProps }) {
+export default function CustomApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
-
-export default MyApp
