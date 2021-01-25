@@ -5,7 +5,7 @@ export default {
       text_secondary: '#02073E', // secondary body color
       heading: '#0F2137', // primary heading color
       heading_secondary: '#02073E', // heading color
-      heading_third: '#02073E',
+      heading_third: '#02073E', 
       background: '#FFFFFF', // body background color
       background_secondary: '#F9FAFC', // secondary background color
       blog_background: '#F9FAFC',

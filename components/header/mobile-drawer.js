@@ -65,6 +65,7 @@ const MobileDrawer = () => {
                               offset={-70}
                               duration={500}
                               key={i}
+                              onClick={toggleHander}
                             >
                                 {label}
                             </Link>
@@ -135,7 +136,7 @@ const styles = {
         a: {
           fontSize: '16px',
           fontWeight: '500',
-          color: 'text_white',
+          color: 'heading_third',
           py: '15px',
           cursor: 'pointer',
           borderBottom: '1px solid #e8e5e5',
@@ -167,7 +168,7 @@ const styles = {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: 'text',
+          color: 'heading_third',
           fontSize: 1,
           mr: 4,
           transition: 'all 0.25s',
@@ -184,7 +185,7 @@ const styles = {
           },
         },
       },
-    
+
       button: {
         color: 'white',
         fontSize: '14px',
