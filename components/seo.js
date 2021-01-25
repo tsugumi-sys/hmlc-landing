@@ -3,7 +3,6 @@ import Head from 'next/head'
 
 export default function SEO({
     description = '北大機械学習サークルHUMLのホームページです。機械学習を自分の武器にして、様々なことにチャレンジするサークルです。',
-    meta,
     title = '北大機械学習サークルHUMLのホームページ',
     ogTitle="北大機械学習サークルHUMLのホームページ",
     ogDescription="北海道大学機械学習サークルへようこそ。機械学習を自分の武器にして、様々なことにチャレンジしましょう～！",
@@ -27,6 +26,14 @@ export default function SEO({
             property: 'og:image',
             content: ogImage   
         },
+        {
+            property: 'og:site_name',
+            content: 'HMLC WebSite'
+        },
+        {
+            property: 'og:type',
+            content: 'website',
+        },
     ]
     const metaData = [
         {
@@ -45,15 +52,7 @@ export default function SEO({
             name: 'twitter:creator',
             content: 'HMLC',
         },
-        {
-            property: 'og:site_name',
-            content: 'HMLC WebSite'
-        },
-        {
-            property: 'og:type',
-            content: 'website',
-        },
-    ].concat(meta);
+    ];
     return (
         <Head>
             <title>{title}</title>
