@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Image } from 'theme-ui'
+import { jsx, Image, Text } from 'theme-ui'
 import { Link } from 'components/link'
+import { FcBiohazard } from 'react-icons/fc' 
 
 export default function Logo({ src, ...rest }) {
     return (
@@ -19,3 +20,23 @@ export default function Logo({ src, ...rest }) {
         </Link>
     )
 };
+
+export function HmlcLogo() {
+    return (
+        <Link
+          path="/"
+          sx={{
+              variant: 'text.heading',
+              display: 'flex',
+              cursor: 'pointer',
+              textDecoration: 'none',
+              mr: 15
+          }}
+        >
+            <FcBiohazard style={{ width:'30px', height: '30px' }}/>
+            <Text as="p">
+                HMLC
+            </Text>
+        </Link>
+    )
+}

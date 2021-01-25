@@ -2,11 +2,9 @@
 /** @jsx jsx */
 import { jsx, Heading, Box, Text, Flex, Container } from 'theme-ui'
 import { Link } from 'components/link'
-import Logo from 'components/logo'
+import { HmlcLogo } from 'components/logo'
 import menuItems from './footer.data'
 import CallToAction from 'sections/call-to-actions'
-// assets
-const FooterLogo = '/assets/footer-logo.svg';
 
 export default function Footer() {
     return (
@@ -16,7 +14,7 @@ export default function Footer() {
                 <Box sx={styles.footer.footerTopArea}>
                     <Box sx={styles.copyrightArea}>
                         <Box className="footer__logo">
-                            <Logo src={FooterLogo} />
+                            <HmlcLogo />
                         </Box>
                         <nav className="footer__menu">
                             <Link path="/" label="Terms of use" />

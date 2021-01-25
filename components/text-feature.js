@@ -1,8 +1,44 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Heading, Text, Button, Link } from 'theme-ui'
+import { jsx, Box, Heading, Text, Button, Link as ThemeLink } from 'theme-ui'
 import List from 'components/list'
 import { IoIosArrowForward } from 'react-icons/io'
+import Link from 'next/link'
+
+export function TextFeatureNext({
+  title,
+  description,
+  points,
+  btnName,
+  btnURL
+}) {
+  return (
+    <Box sx={styles.card}>
+        <Box sx={styles.wrapper}>
+            <Heading as="h2" sx={styles.wrapper.title}>
+                {title}
+            </Heading>
+            <Text as="p" className="description" sx={styles.wrapper.description}>
+                {description}
+            </Text>
+        </Box>
+        {points && <List items={points} childStyle={styles.listItem} />}
+
+        {btnName && (
+          <div className="next-link">
+              <Link href={btnURL}>
+                <a style={{ textDecoration: 'none' }}>
+                  <Button variant="secondary" aria-label={btnURL}>
+                      {btnName}&nbsp;
+                      <IoIosArrowForward />
+                  </Button>
+                </a>
+              </Link>
+          </div>
+        )}
+    </Box>
+  );
+}
 
 export default function TextFeature({
     title,
@@ -24,12 +60,12 @@ export default function TextFeature({
             {points && <List items={points} childStyle={styles.listItem} />}
 
             {btnName && (
-                <Link href={btnURL} variant="default" className="btn__link">
+                <ThemeLink href={btnURL} variant="default" className="btn__link">
                     <Button variant="secondary" aria-label={btnURL}>
                         {btnName}&nbsp;
                         <IoIosArrowForward />
                     </Button>
-                </Link>
+                </ThemeLink>
             )}
         </Box>
     );
@@ -47,6 +83,10 @@ const styles = {
       '.list__box': {
         pt: [5, null, null, null, 6],
         width: '100%',
+      },
+      '.next-link': {
+        marginTop: ['25px', '30px'],
+        mx: ['auto', null, null, 0]
       },
     },
     wrapper: {

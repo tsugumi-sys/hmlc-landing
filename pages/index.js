@@ -1,6 +1,4 @@
 import React from 'react'
-import { ThemeProvider } from 'theme-ui'
-import theme from 'theme'
 import SEO from 'components/seo'
 import Layout from 'components/layout'
 import Banner from 'sections/banner'
@@ -12,7 +10,7 @@ import Support from 'sections/support'
 
 export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
+    
       <Layout>
         <SEO
           description="北海道大学機械学習サークルへようこそ。機械学習を自分の武器にして、様々なことにチャレンジしましょう～！"
@@ -25,6 +23,6 @@ export default function Home() {
         <WorkFlow />
         <Support />
       </Layout>
-    </ThemeProvider>
+    
   )
 }

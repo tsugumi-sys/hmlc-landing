@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Container, Box } from 'theme-ui'
-import TextFeature from 'components/text-feature'
+import { TextFeatureNext } from 'components/text-feature'
 import Image from 'components/image'
 import { IoIosCheckmarkCircle } from 'react-icons/io'
 // assets
@@ -14,7 +14,7 @@ const data = {
     description:
       '便利なライブラリ、豊富なデータソース、興味深い論文、実際に作ったアプリケーションの技術スタック等を教え合いましょう。また、初学者へのサポートも積極的に行います。',
     btnName: 'Explore Details',
-    btnURL: '#',
+    btnURL: '/blog',
     points: [
         {
             icon: <IoIosCheckmarkCircle />,
@@ -35,7 +35,7 @@ export default function BusinessProfit() {
                     <Image src={ProfitThumb} alt="Thumbnail" width="700" height="565" />
                 </Box>
                 <Box sx={styles.contentBox}>
-                    <TextFeature
+                    <TextFeatureNext
                       title={data.title}
                       description={data.description}
                       btnName={data.btnName}

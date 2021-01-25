@@ -3,26 +3,39 @@ import Head from 'next/head'
 
 export default function SEO({
     description = '北大機械学習サークルHUMLのホームページです。機械学習を自分の武器にして、様々なことにチャレンジするサークルです。',
-    author='tsugumi7878',
     meta,
-    title = '北大機械学習サークルHUMLのホームページ'
+    title = '北大機械学習サークルHUMLのホームページ',
+    ogTitle="北大機械学習サークルHUMLのホームページ",
+    ogDescription="北海道大学機械学習サークルへようこそ。機械学習を自分の武器にして、様々なことにチャレンジしましょう～！",
+    ogUrl="https://hmlc.vercel.app",
+    ogImage="https://hmlc.vercel.app/assets/hmlc-landing.png"
 }) {
+    const ogData = [
+        {
+            property: 'og:title',
+            content: ogTitle,
+        },
+        {
+            property: 'og:description',
+            content: ogDescription,
+        },
+        {
+            property: 'og:url',
+            content: ogUrl
+        },
+        {
+            property: 'og:image',
+            content: ogImage   
+        },
+    ]
     const metaData = [
         {
             name: 'description',
             content: description,
         },
         {
-            property: 'og:title',
-            content: title,
-        },
-        {
-            property: 'og:description',
-            content: description,
-        },
-        {
-            property: 'og:type',
-            content: 'website',
+            name: 'title',
+            content: title
         },
         {
             name: 'twitter:card',
@@ -30,15 +43,15 @@ export default function SEO({
         },
         {
             name: 'twitter:creator',
-            content: author,
+            content: 'HMLC',
         },
         {
-            name: 'twitter:title',
-            content: title,
+            property: 'og:site_name',
+            content: 'HMLC WebSite'
         },
         {
-            name: 'twitter:description',
-            content: description
+            property: 'og:type',
+            content: 'website',
         },
     ].concat(meta);
     return (
@@ -46,6 +59,9 @@ export default function SEO({
             <title>{title}</title>
             {metaData.map(({ name, content }, i) => (
                 <meta key={i} name={name} content={content} />
+            ))}
+            {ogData.map(({ property, content }, i) => (
+                <meta key={i} property={property} content={content} />
             ))}
         </Head>
     );

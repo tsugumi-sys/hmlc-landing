@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Container, Box } from 'theme-ui'
-import TextFeature from 'components/text-feature'
+import { TextFeatureNext} from 'components/text-feature'
 import Image from 'components/image'
 // assets
 const KnowledgeThumb = '/assets/images/knowledge-thumb.png';
@@ -11,7 +11,7 @@ const data = {
     description:
       '頼もしいメンバーを見つけて少数精鋭のチームを組み、協力して自分の実現したいプロジェクトに取り組むことができます。コンペに参加したり、アプリケーションを一緒に作りましょう。',
     btnName: 'Explore Details',
-    btnURL: '#',
+    btnURL: '/blog',
 };
 
 export default function Knowledge() {
@@ -19,7 +19,7 @@ export default function Knowledge() {
         <section sx={{ variant: 'section.knowledge' }}>
             <Container sx={styles.containerBox}>
                 <Box sx={styles.contentBox}>
-                    <TextFeature
+                    <TextFeatureNext
                       title={data.title}
                       description={data.description}
                       btnName={data.btnName}

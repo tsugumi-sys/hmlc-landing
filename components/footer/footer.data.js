@@ -8,7 +8,7 @@ export default [
         header: 'About Us',
         items: [
             {
-                path: '/',
+                path: '/blog',
                 label: 'Blog'
             }
         ]

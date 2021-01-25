@@ -1,6 +1,6 @@
-import { extend } from 'next-compose-plugins'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-// import gtag here
+import { GA_TRACKING_ID } from 'lib/gtag'
+
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -12,6 +12,23 @@ class MyDocument extends Document {
             <Html lang="ja">
                 <Head>
                     {/* google analytics */}
+                    <script
+                      async
+                      src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                    />
+                    <script
+                      dangerouslySetInnerHTML={{
+                          __html:`
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+
+                          gtag('config', '${GA_TRACKING_ID}', {
+                              page_path: window.location.pathname,
+                          });
+                          `,
+                      }}
+                    />
                     <link rel="shortcut icon" href="/favicon.ico" />
                 </Head>
                 <body>

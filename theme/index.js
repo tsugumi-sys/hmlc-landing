@@ -5,8 +5,11 @@ export default {
       text_secondary: '#02073E', // secondary body color
       heading: '#0F2137', // primary heading color
       heading_secondary: '#02073E', // heading color
+      heading_third: '#02073E',
       background: '#FFFFFF', // body background color
       background_secondary: '#F9FAFC', // secondary background color
+      blog_background: '#F9FAFC',
+      blog_cardText: '#999999',
       border_color: '#E5ECF4', // border color
       primary: '#F94962', // primary button and link color
       secondary: '#3183FF', // secondary color - can be used for hover states
@@ -17,11 +20,20 @@ export default {
       // highlight	a background color for highlighting text
       modes: {
         dark: {
-          text: '#fff',
-          background: '#000',
-          primary: '#0cf',
-          secondary: '#09c',
-          muted: '#111',
+          text: '#fff', // body color and primary color
+          text_secondary: '#f5f5f5', // secondary body color
+          heading: '#fff', // primary heading color
+          heading_secondary: '#f5f5f5', // heading color
+          background: '#000', // body background color
+          background_secondary: '#222639', // secondary background color
+          blog_background: '#222639',
+          blog_cardText: '#f5f5f5',
+          border_color: '#E5ECF4', // border color
+          primary: '#0cf', // primary button and link color
+          secondary: '#09c', // secondary color - can be used for hover states
+          muted: '#111', // muted color
+          accent: '#609', // a contrast color for emphasizing UI
+          yellow: '#F6C416',
         },
       },
     },
@@ -99,6 +111,12 @@ export default {
         pt: [8, null, 9, null, null, 10],
         pb: [8, null, 9, null, null, 9],
       },
+      blog: {
+        py: [9, 10, 9, null, null, 10],
+        width: ['90%', '90%', '80%', '55%'],
+        mx:'auto',
+        backgroundColor: 'background_secondary'
+      }
     },
     sectionHeader: {
       width: ['100%', null, null, '650px'],
@@ -146,6 +164,14 @@ export default {
       heroSecondary: {
         color: 'heading_secondary',
         fontSize: [2, '17px', null, 3, null, 4],
+        lineHeight: [1.9, null, null, null, 2.1],
+        fontWeight: 'body',
+        pr: [0, null, null, null, 4, 6],
+        mb: [6, null, '35px'],
+      },
+      blogSubtTitle: {
+        color: 'heading_secondary',
+        fontSize: ['34px', 10, 11, 12, 11, 12, 13, 14],
         lineHeight: [1.9, null, null, null, 2.1],
         fontWeight: 'body',
         pr: [0, null, null, null, 4, 6],
@@ -237,7 +263,7 @@ export default {
       },
       whiteButton: {
         variant: 'buttons.defaultBtn',
-        color: 'heading_secondary',
+        color: 'heading_third',
         padding: ['15px 20px', null, '17px 20px 16px', null, '20px 30px'],
         bg: 'white',
         fontWeight: 'bold',
@@ -260,6 +286,27 @@ export default {
         '&:hover': {
           boxShadow: 'rgba(249, 84, 84, 0.3) 0px 9px 20px -5px',
         },
+      },
+      colorModeButton: {
+        variant: 'buttons.colorBtn',
+        backgroundColor: 'primary',
+        width: '50px',
+        height: '50px',
+        padding: 2,
+        borderRadius: '50%',
+        mr: [0, '30px']
+      },
+      blogButton: {
+        backgroundColor: 'primary',
+        width: '50px',
+        height: '50px',
+        padding: 2,
+        borderRadius: '50%',
+        cursor: 'pointer',
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        zIndex: 1024
       },
       secondary: {
         variant: 'buttons.defaultBtn',
