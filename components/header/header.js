@@ -38,7 +38,7 @@ export default function Header({ className }) {
               }}>
                {colorMode === 'default' ? '🌔' : '🌟'}
           </Button>
-          <a target="_blank" rel="noopener" href="https://twitter.com/hulclow" style={{ textDecoration: 'none' }}>
+          <a target="_blank" rel="noopener" href="https://twitter.com/@hmlc_tweet" style={{ textDecoration: 'none' }}>
             <Button
               className="donate__btn"
               variant="secondary"
@@ -70,7 +70,7 @@ export function BlogHeader({ className }) {
               }}>
                {colorMode === 'default' ? '🌔' : '🌟'}
           </Button>
-          <a target="_blank" rel="noopener" href="https://twitter.com/hulclow" style={{ textDecoration: 'none' }}>
+          <a target="_blank" rel="noopener" href="https://twitter.com/@hmlc_tweet" style={{ textDecoration: 'none' }}>
             <Button
               className="donate__btn"
               variant="secondary"

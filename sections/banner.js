@@ -19,7 +19,7 @@ export default function Banner() {
                         Python, Julia, TensorFlow, Pytorch e.t.c...言語、ライブラリはメンバーそれぞれです。
                     </Text>
                     <Box sx={styles.linkButton}>
-                      <Link href="https://twitter.com/hulclow">
+                      <Link href="https://twitter.com/@hmlc_tweet">
                         <a target="_blank" rel="noopener">
                           <Button
                             sx={styles.button}

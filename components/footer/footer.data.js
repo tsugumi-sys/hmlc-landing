@@ -17,7 +17,7 @@ export default [
         header: 'Socials',
         items: [
             {
-                path: 'https://twitter.com/hulclow',
+                path: 'https://twitter.com/@hmlc_tweet',
                 label: 'Twitter',
                 name: 'twitter',
                 icon: <FaTwitter />,

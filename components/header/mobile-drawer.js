@@ -16,7 +16,7 @@ import menuItems from './header.data'
 
 const socials = [
     {
-        path: 'https://twitter.com/hulclow',
+        path: 'https://twitter.com/@hmlc_tweet',
         icon: <FaTwitter />,
     },
     {

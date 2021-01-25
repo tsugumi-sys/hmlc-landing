@@ -17,7 +17,7 @@ export default function  CallToAction() {
                         Do you have any question? Feel free to contact us
                     </Heading>
                     <Box sx={styles.btnWrapper}>
-                      <Link href="https://twitter.com/hulclow">
+                      <Link href="https://twitter.com/@hmlc_tweet">
                         <a target="_blank" rel="noopener">
                           <Button variant="whiteButton" aria-label="Contact Us">
                               CONTACT US
