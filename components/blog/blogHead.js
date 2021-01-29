@@ -44,7 +44,7 @@ const styles = {
         pb: [5, 6, 5, null, null, 6],
         width: ['90%', '90%', '80%', '55%'],
         mx:'auto',
-        backgroundColor: 'background_secondary'
+        backgroundColor: 'background'
     },
     authorBox: {
         display: 'flex',

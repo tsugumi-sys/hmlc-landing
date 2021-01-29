@@ -84,7 +84,7 @@ const styles = {
         pb: [9, 10, 9, null, null, 10],
         width: ['90%', '90%', '80%', '55%'],
         mx:'auto',
-        backgroundColor: 'background_secondary'
+        backgroundColor: 'background'
     },
     wrapper: {
         p: [0, 2]
